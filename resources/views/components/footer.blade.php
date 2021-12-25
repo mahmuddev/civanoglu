@@ -51,7 +51,7 @@
     <div class="flex pb-12">
         <div class="w-1/4 pr-6"> 
             <img width="100" src="/img/logo.png" alt="">
-            <p class=" text-sm mt-12">Copyright © BuyProperty 2021</p>
+            <p class=" text-sm mt-12">Copyright <span>&copy;</span> BuyProperty 2021</p>
         </div>
         <div class="w-3/4 font-bold leading-8">
             <div class="flex -mx-6">
