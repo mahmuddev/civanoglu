@@ -9,6 +9,9 @@
 
         <!-- Fonts -->
 
+        {{-- font awesome --}}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 

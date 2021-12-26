@@ -1,7 +1,7 @@
 require('./bootstrap');
 
 import Alpine from 'alpinejs';
-//import jQuery from './jquery-3.6.0.slim.min';
+window.$ = window.jQuery = require('jquery');
 require('./slick.min-1.8.1');
 
 window.Alpine = Alpine;
@@ -16,4 +16,8 @@ jQuery(window).scroll(function () {
     else {
         jQuery('.sticky-header').removeClass('sticky-header-active');
     }
+});
+
+jQuery(document).ready(function ($) {
+    $('.slider-test').slick();
 });
