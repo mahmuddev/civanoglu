@@ -1,7 +1,8 @@
 require('./bootstrap');
 
 import Alpine from 'alpinejs';
-import jQuery from './jquery-3.6.0.slim.min';
+//import jQuery from './jquery-3.6.0.slim.min';
+require('./slick.min-1.8.1');
 
 window.Alpine = Alpine;
 
