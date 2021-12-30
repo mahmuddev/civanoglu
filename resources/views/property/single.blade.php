@@ -249,4 +249,7 @@
 
 </div>
 
+<div class="container">
+
+</div>
 </x-guest-layout>
