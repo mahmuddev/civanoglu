@@ -253,7 +253,7 @@
     <div class="main">
         <div class="header mt-28">
             <div class="hero-area text-xl">
-
+                <h1>This is some new </h1>
             </div>
         </div>
     </div>
