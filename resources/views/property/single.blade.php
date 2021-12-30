@@ -250,6 +250,8 @@
 </div>
 
 <div class="container">
-
+    <div class="main">
+        
+    </div>
 </div>
 </x-guest-layout>
