@@ -255,7 +255,9 @@
             <div class="hero-area text-xl">
                 <h1>This is some new </h1>
                 <div class="image-area ">
+                    <div class="post-img ">
 
+                    </div>
                 </div>
             </div>
         </div>
