@@ -92,9 +92,40 @@
         <div class="w-9/12 mx-2">
             <div id="slider" class="">
                 <div class="gallery-slider">
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center">
-
-                    </div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg1.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg2.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg3.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg4.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg5.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg6.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                </div>
+                <div class="thumbnail-slider">
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg1.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg2.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg3.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg4.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg5.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg6.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
                 </div>
             </div>
             {{-- Overview --}}

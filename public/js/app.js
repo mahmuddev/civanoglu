@@ -5465,7 +5465,15 @@ jQuery(window).scroll(function () {
   }
 });
 jQuery(document).ready(function ($) {
-  $('.slider-test').slick();
+  $('.gallery-slider').slick({
+    asNavFor: '.thumbnail-slider'
+  });
+  $('.thumbnail-slider').slick({
+    slidesToShow: 6,
+    asNavFor: '.gallery-slider',
+    centerMode: true,
+    focusOnSelect: true
+  });
 });
 
 /***/ }),
