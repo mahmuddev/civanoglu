@@ -640,9 +640,6 @@ select {
 .-m-10 {
   margin: -2.5rem;
 }
-.m-5 {
-  margin: 1.25rem;
-}
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -1144,9 +1141,6 @@ select {
 .p-2 {
   padding: 0.5rem;
 }
-.p-5 {
-  padding: 1.25rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1638,6 +1632,28 @@ h1, h2, h3, h4, h5, h6{
 }
 .single-thumbnail-item {
     height: 80px;
+}
+.slick-arrow {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.5;
+}
+.slick-arrow:hover {
+    opacity: 1;
+}
+.slick-next.slick-arrow {
+    left: auto;
+    right: 12px;
 }
 /* Search Form on Search Page*/
 .inputLabel {

@@ -20,12 +20,24 @@ jQuery(window).scroll(function () {
 
 jQuery(document).ready(function ($) {
     $('.gallery-slider').slick({
-        asNavFor: '.thumbnail-slider'
+        asNavFor: '.thumbnail-slider',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: false,
+        prevArrow: '<i class="fa fa-angle-left slick-prev"></i>',
+        nextArrow: '<i class="fa fa-angle-right slick-next"></i>'
     });
     $('.thumbnail-slider').slick({
-        slidesToShow: 6,
         asNavFor: '.gallery-slider',
-        centerMode: true,
-        focusOnSelect: true
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        arrows: true,
+        centerPadding: '20px',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        prevArrow: '<i class="fa fa-angle-left slick-prev"></i>',
+        nextArrow: '<i class="fa fa-angle-right slick-next"></i>'
     });
 });
