@@ -15,20 +15,19 @@ class PropertyFactory extends Factory
     {
         return [
             'name' => '',
-            'featured_media_id' => '',
+            'featured_image' => '',
             'location_id' => '',
             'price' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
-            '' => '',
+            'sale' => '',
+            'type' => '',
+            'bedrooms' => '',
+            'bathrooms' => '',
+            'net_sqm' => '',
+            'gross_sqm' => '',
+            'pool' => '',
+            'overview' => '',
+            'why_buy' => '',
+            'description' => ''
         ];
     }
 }
