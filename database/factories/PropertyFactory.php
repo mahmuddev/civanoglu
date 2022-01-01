@@ -15,7 +15,7 @@ class PropertyFactory extends Factory
     {
         return [
             'name' => '',
-            'featured_image' => '',
+            'featured_image' => 'https://picsum.photos/1200/800',
             'location_id' => '',
             'price' => '',
             'sale' => '',
