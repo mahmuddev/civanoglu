@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Property;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class MediaFactory extends Factory
@@ -14,8 +15,8 @@ class MediaFactory extends Factory
     public function definition()
     {
         return [
-            'name' => '',
-            'property_id' => ''
+            'name' => 'https://picsum.photos/1200/800',
+            'property_id' => Property::all()->random()->id
         ];
     }
 }
