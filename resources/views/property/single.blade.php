@@ -36,7 +36,7 @@
             <li class="mx-3"><i class="fa fa-angle-right"></i></li>
             <li><a class="text-red-800" href="">Properties</a></li>
             <li class="mx-3"><i class="fa fa-angle-right"></i></li>
-            <li>$property -> name</li>
+            <li>{{ $property->name }}</li>
         </ul>
     </div>
 </div>
@@ -46,10 +46,8 @@
     <div class="container mx-auto">
         <div class="flex justify-between">
             <div class="w-8/12">
-                <h2 class="text-3xl text-gray-600"> $property->name </h2>
-                <h3 class="text-lg mt-2">Price : <span class="text-red-800">
-                        
-                    </span></h3>
+                <h2 class="text-3xl text-gray-600">{{ $property->name }}</h2>
+                <h3 class="text-lg mt-2">Price : <span class="text-red-800">{{ number_format($property->price, 2,',',',') }} TL</span></h3>
             </div>
             <div class="w-3/12">
                 <ul class="flex justify-end">
@@ -92,47 +90,22 @@
         <div class="w-9/12 mx-2">
             <div id="slider" class="">
                 <div class="gallery-slider">
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg1.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg2.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg3.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg4.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg5.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg6.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-gallery-item bg-cover bg-center"></div>
+                    @foreach ($property->gallery as $gallery)
+                        <div style="background-image: url({{ $gallery->name }});" class="single-gallery-item bg-cover bg-center"></div>
+                    @endforeach
+                    
                 </div>
                 <div class="thumbnail-slider">
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg1.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg2.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg3.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg4.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg5.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg6.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
-                    <div style="background-image: url('/img/hero-bg.jpg');" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    @foreach ($property->gallery as $gallery)
+                        <div style="background-image: url({{ $gallery->name }});" class="single-thumbnail-item bg-cover bg-center ml-5"></div>
+                    @endforeach
                 </div>
             </div>
             {{-- Overview --}}
             <div class="flex justify-between items-center bg-white p-8 mt-10 shadow-sm">
                 <h4 class="text-lg w-2/12 langBN">'Overview'</h4>
                 <div class="border-l-2 border-gray-300 pl-5 ml-5 w-10/12 text-base">
-                    <p> $property -> overview </p>
+                    <p>{{ $property->overview }}  </p>
                 </div>
             </div>
 
@@ -146,12 +119,20 @@
                                 <div class="flex"><i class="fa fa-home mr-2 text-red-400 w-5 text-center"></i><span
                                         class="text-sm">'Type':</span></div>
                                 <span class="ml-2 font-bold">
-                                    </span>
+                                    @if ($property->type == 1)
+                                        Apartment 
+                                    @elseif ($property->type == 2)
+                                        Villa
+                                    @else
+                                        Land
+                                    @endif
+                                    
+                                </span>
                             </li>
                             <li class="flex text-sm">
                                 <div class="flex"><i class="fa fa-bed mr-2 text-red-400 w-5 text-center"></i><span
                                         class="text-sm">'Bedroom':</span></div>
-                                <span class="ml-2 font-bold"> $property -> bedrooms </span>
+                                <span class="ml-2 font-bold"> {{ $property->bedrooms }} </span>
                             </li>
                         </ul>
                     </div>
@@ -161,13 +142,13 @@
                                 <div class="flex"><i
                                         class="fa fa-shower mr-2 text-red-400 w-5 text-center"></i><span
                                         class="text-sm">'Bathrooms':</span></div>
-                                <span class="ml-2 font-bold"> $property -> bathrooms </span>
+                                <span class="ml-2 font-bold">{{ $property->bathrooms }}</span>
                             </li>
                             <li class="flex text-sm">
                                 <div class="flex"><i
                                         class="fa fa-map-marker mr-2 text-red-400 w-5 text-center"></i><span
                                         class="text-sm">'Location':</span></div>
-                                <span class="ml-2 font-bold capitalize noTranslate"> $property -> location->name </span>
+                                <span class="ml-2 font-bold capitalize noTranslate"> {{ $property->location->name }} </span>
                             </li>
                         </ul>
                     </div>
@@ -177,14 +158,22 @@
                                 <div class="flex"><i
                                         class="fa fa-gratipay mr-2 text-red-400 w-5 text-center"></i><span
                                         class="text-sm">'Living space sqm':</span></div>
-                                <span class="ml-2 font-bold"> $property -> net_sq_meter </span>
+                                <span class="ml-2 font-bold">{{ $property->net_sqm }}</span>
                             </li>
                             <li class="flex text-sm">
                                 <div class="flex"><i
                                         class="fa fa-low-vision mr-2 text-red-400 w-5 text-center"></i><span
                                         class="text-sm">'Pool':</span></div>
                                 <span class="ml-2 font-bold">
-                                    
+                                    @if ($property->pool == 1)
+                                        Private 
+                                    @elseif ($property->pool == 2)
+                                        Public
+                                    @elseif ($property->pool == 3)
+                                        Both
+                                    @else
+                                        No
+                                    @endif
                                 </span>
                             </li>
                         </ul>
@@ -198,14 +187,14 @@
             <div class="flex justify-between items-center bg-white p-8 mt-10 shadow-sm">
                 <h4 class="text-lg w-2/12">Why buy this Property</h4>
                 <div class="border-l-2 border-gray-300 pl-5 ml-5 w-10/12 text-base">
-                    $property -> why_buy 
+                    {{ $property->why_buy }} 
                 </div>
             </div>
 
             {{-- Description --}}
             <div class="bg-white p-8 mt-10 shadow-sm" id="description">
 
-                 $property->description 
+                 {{ $property->description }}
 
             </div>
 
