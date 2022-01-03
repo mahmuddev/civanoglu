@@ -12,4 +12,8 @@ class PropertyController extends Controller
         $property = Property::findOrFail($id);
         return view('property.single', ['property' => $property]);
     }
+    public function index()
+    {
+        return view('property.index');
+    }
 }
