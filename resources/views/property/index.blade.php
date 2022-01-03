@@ -23,7 +23,12 @@
 
         {{-- Left Content --}}
         <div class="w-9/12 mx-2">
-
+            <div class="flex flex-wrap -mx-3 justify-between mt-10">
+                @foreach ($latest_properties as $property)
+                    @include('components.single-property-card', ['property' => $property])
+                @endforeach
+                {{ $latest_properties->links() }}
+            </div>
         </div>
         {{-- Left Content End --}}
 
