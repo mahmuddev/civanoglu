@@ -12,9 +12,9 @@ class PropertyController extends Controller
         $property = Property::findOrFail($id);
         return view('property.single', ['property' => $property]);
     }
-    public function index()
+    public function index(Request $request)
     {
-        $latest_properties = Property::latest()->paginate(12);
+        $latest_properties = Property::latest()->where('type', $request->type)->paginate(12);
         return view('property.index', ['latest_properties' => $latest_properties]);
     }
 }

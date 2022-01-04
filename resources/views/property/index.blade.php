@@ -14,7 +14,15 @@
 <!-- Title & Share -->
 <div class=" bg-white py-8">
     <div class=" container mx-auto">
-        <h2 class=" text-3xl text-gray-600">Properties</h2>
+        <h2 class=" text-3xl text-gray-600">Properties
+            @if (request('type') == 0)
+                - Land
+            @elseif (request('type') == 1)
+                - Apartment
+            @elseif (request('type') == 2)
+                - Villa
+            @endif
+        </h2>
     </div>
 </div>
 <!-- Content -->
@@ -27,8 +35,10 @@
                 @foreach ($latest_properties as $property)
                     @include('components.single-property-card', ['property' => $property])
                 @endforeach
-                {{ $latest_properties->links() }}
             </div>
+
+            {{ $latest_properties->links() }}
+
         </div>
         {{-- Left Content End --}}
 
