@@ -14,7 +14,7 @@
         <form action="{{ route('properties') }}" method="GET" class="flex justify-between">
             <div class="flex w-7/12 justify-between">
                 <div class="flex flex-col mx-3">
-                    <select name="sale" class="border-0 focus:ring-0" required>
+                    <select name="sale" class="border-0 focus:ring-0">
                         <option value="">Buy or Rent</option>
                         <option value="1">Buy</option>
                         <option value="0">Rent</option>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="py-3 self-center border-gray-500 border-2"></div>
                 <div class="flex flex-col mx-3">
-                    <select name="type" class="border-0 focus:ring-0" required>
+                    <select name="type" class="border-0 focus:ring-0">
                         <option value="">Type</option>
                         <option value="0">Land</option>
                         <option value="1">Appartment</option>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="flex justify-between items-center w-4/12 ml-5">
-                <input type="search" name="search_location" placeholder="Search by Locationn" class="rounded-lg px-4 py-2 w-full mr-4">
+                <input type="search" name="" placeholder="Search by Locationn" class="rounded-lg px-4 py-2 w-full mr-4">
                 <button type="submit" class="btn">Search</button>
             </div>
         </form>
