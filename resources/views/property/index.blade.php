@@ -43,8 +43,8 @@
         {{-- Left Content End --}}
 
         {{-- Sidebar --}}
-        <div class="w-3/12 mx-2">
-            
+        <div class="w-3/12 ml-6 vertical-search-form">
+            @include('components.property-search-form')
         </div>
 
 
