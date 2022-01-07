@@ -24,18 +24,15 @@ class PropertyController extends Controller
         if (!empty($request->price)) {
             //$latest_properties = $latest_properties->where('bedrooms', $request->bedrooms);
             if ($request->price == '100000') {
-                $latest_properties = $latest_properties->where('price', '>', 100000)->where('price', '<=', 100000);
+                $latest_properties = $latest_properties->where('price', '>', 100000)->where('price', '<=', 200000);
             } else {
                 if ($request->price == '200000') {
-                    $latest_properties = $latest_properties->where('price', '>', 200000)->where('price', '<=', 200000);
+                    $latest_properties = $latest_properties->where('price', '>', 200000)->where('price', '<=', 300000);
                 }
                 if ($request->price == '300000') {
-                    $latest_properties = $latest_properties->where('price', '>', 300000)->where('price', '<=', 300000);
+                    $latest_properties = $latest_properties->where('price', '>', 300000)->where('price', '<=', 400000);
                 }
                 if ($request->price == '400000') {
-                    $latest_properties = $latest_properties->where('price', '>', 400000)->where('price', '<=', 400000);
-                }
-                if ($request->price == '500000') {
                     $latest_properties = $latest_properties->where('price', '>', 400000)->where('price', '<=', 500000);
                 }
             }
@@ -43,7 +40,9 @@ class PropertyController extends Controller
         if (!empty($request->bedrooms)) {
             $latest_properties = $latest_properties->where('bedrooms', $request->bedrooms);
         }
+
         $latest_properties = $latest_properties->paginate(12);
+
         return view('property.index', ['latest_properties' => $latest_properties]);
     }
 }
