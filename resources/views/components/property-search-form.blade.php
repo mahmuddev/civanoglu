@@ -9,6 +9,15 @@
         </div>
         <div class="py-3 self-center border-gray-500 border-2"></div>
         <div class="flex flex-col mx-3">
+            <select name="location" class="border-0 focus:ring-0">
+                <option value="">Loaction</option>
+                @foreach ($locations as $location)
+                    <option {{ request('location') == $location->id ? 'selected="selected"' : '' }} value="{{ $location->id }}">{{ $location->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="py-3 self-center border-gray-500 border-2"></div>
+        <div class="flex flex-col mx-3">
             <select name="type" class="border-0 focus:ring-0">
                 <option value="">Type</option>
                 <option {{ request('type') == '0' ? 'selected="selected"' : '' }} value="0">Land</option>
@@ -26,7 +35,7 @@
                 <option {{ request('price') == '400000' ? 'selected="selected"' : '' }} value="400000">4,00,000 - 5,00,000</option>
             </select>
         </div>
-        <div class="py-3 self-center border-gray-500 border-2"></div>
+        {{-- <div class="py-3 self-center border-gray-500 border-2"></div>
         <div class="flex flex-col mx-3">
             <select name="bedrooms" class="border-0 focus:ring-0">
                 <option value="">Bedrooms</option>
@@ -36,10 +45,10 @@
                 <option {{ request('bedrooms') == '4' ? 'selected="selected"' : '' }} value="4">4</option>
                 <option {{ request('bedrooms') == '5' ? 'selected="selected"' : '' }} value="5">5</option>
             </select>
-        </div>
+        </div> --}}
     </div>
     <div class="flex justify-between items-center w-4/12 ml-5">
-        <input type="search" name="" placeholder="Search by Locationn" class="rounded-lg px-4 py-2 w-full mr-4">
+        <input type="search" name="property_name" value="{{ request('property_name') }}" placeholder="Try to search for something" class="rounded-lg px-4 py-2 w-full mr-4">
         <button type="submit" class="btn">Search</button>
     </div>
 </form>

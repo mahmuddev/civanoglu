@@ -11,7 +11,7 @@
     </div>
     <!-- Search From Area -->
     <div class="rounded-lg container bg-white p-4 relative -m-10 z-30 shadow-lg">
-        @include('components.property-search-form')
+        @include('components.property-search-form', ['locations' => $locations])
     </div>
     <!-- Content Area -->
     <div class="pt-32 container text-center">

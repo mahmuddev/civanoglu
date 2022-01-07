@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Location;
 use App\Models\Property;
 use Illuminate\Http\Request;
 
@@ -15,11 +16,15 @@ class PropertyController extends Controller
     public function index(Request $request)
     {
         $latest_properties = Property::latest();
+        $locations = Location::select(['id', 'name'])->get();
         if (!empty($request->sale)) {
             $latest_properties = $latest_properties->where('sale', $request->sale);
         }
         if (!empty($request->type)) {
             $latest_properties = $latest_properties->where('type', $request->type);
+        }
+        if (!empty($request->location)) {
+            $latest_properties = $latest_properties->where('location_id', $request->location);
         }
         if (!empty($request->price)) {
             //$latest_properties = $latest_properties->where('bedrooms', $request->bedrooms);
@@ -40,9 +45,15 @@ class PropertyController extends Controller
         if (!empty($request->bedrooms)) {
             $latest_properties = $latest_properties->where('bedrooms', $request->bedrooms);
         }
+        if (!empty($request->property_name)) {
+            $latest_properties = $latest_properties->where('name', 'LIKE', '%' . $request->property_name . '%');
+        }
 
         $latest_properties = $latest_properties->paginate(12);
 
-        return view('property.index', ['latest_properties' => $latest_properties]);
+        return view('property.index', [
+            'latest_properties' => $latest_properties,
+            'locations' => $locations
+        ]);
     }
 }
