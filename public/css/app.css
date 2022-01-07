@@ -1668,37 +1668,6 @@ h1, h2, h3, h4, h5, h6{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
-.vertical-search-form {
-  align-self: baseline;
-}
-.vertical-search-form .single-search-field select {
-    border: 1px solid #eee;
-    border-radius: 0.125rem;
-    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.vertical-search-form .search-form, .vertical-search-form .search-form > div {
-  display: block;
-  width: 100%;
-}
-.vertical-search-form .single-search-field {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.75rem;
-}
-.vertical-search-form .search-field-border {
-  display: none;
-}
-.vertical-search-form .search-submit {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.75rem;
-}
-.vertical-search-form .search-submit button {
-  margin-top: 0.5rem;
-  width: 100%;
-}
 .hover\:border-yellow-500:hover {
   --tw-border-opacity: 1;
   border-color: rgb(234 179 8 / var(--tw-border-opacity));
@@ -1923,3 +1892,4 @@ h1, h2, h3, h4, h5, h6{
     padding-right: 2rem;
   }
 }
+

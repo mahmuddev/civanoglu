@@ -111,27 +111,3 @@ h1, h2, h3, h4, h5, h6{
 .inputLabel {
     @apply text-sm text-gray-600;
 }
-.vertical-search-form {
-    @apply self-baseline
-}
-.vertical-search-form .single-search-field select {
-    border: 1px solid #eee;
-    @apply shadow-sm rounded-sm;
-}
-
-.vertical-search-form .search-form, .vertical-search-form .search-form > div{
-@apply block w-full
-}
-
-.vertical-search-form .single-search-field{
-@apply mx-auto mt-3
-}
-.vertical-search-form .search-field-border{
-@apply hidden
-}
-.vertical-search-form .search-submit{
-@apply mx-auto mt-3
-}
-.vertical-search-form .search-submit button{
-    @apply w-full mt-2
-}
