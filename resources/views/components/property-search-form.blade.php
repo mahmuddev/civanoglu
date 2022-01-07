@@ -1,7 +1,7 @@
 <form action="{{ route('properties') }}" method="GET" class="flex justify-between">
     <div class="flex w-7/12 justify-between">
         <div class="flex flex-col mx-3">
-            <select name="sale" class="border-0 focus:ring-0">
+            <select name="sale" class="border-0 focus:ring-0 mt-10">
                 <option value="">Buy or Rent</option>
                 <option value="1">Buy</option>
                 <option value="0">Rent</option>
