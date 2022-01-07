@@ -11,7 +11,9 @@ class PageController extends Controller
     {
         $page = Page::where('slug', $slug)->first();
         if (!empty($page)) {
-            return view('page');
+            return view('page', ['page' => $page]);
+        } else {
+            return abort('404');
         }
     }
 }
