@@ -782,11 +782,8 @@ select {
 .-mr-2 {
   margin-right: -0.5rem;
 }
-.mt-40 {
-  margin-top: 10rem;
-}
-.mt-20 {
-  margin-top: 5rem;
+.mt-11 {
+  margin-top: 2.75rem;
 }
 .block {
   display: block;
