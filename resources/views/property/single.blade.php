@@ -75,13 +75,7 @@
         </div>
     </div>
 </div>
-
-
-
-{{-- <div id="notice" class="text-center bg-green-100 text-green-700 p-3">session 'message'</div> --}}
-
-
-
+        
 <!-- Content -->
 <div class="container mx-auto my-14">
     <div class="flex justify-between mx-2">
@@ -210,7 +204,10 @@
             {{-- Form --}}
             <div class="px-4 py-5 text-left bg-gray-300 my-5">
                 <h1 class="text-2xl font-normal leading-none mb-5 langBN">Enquire about this property</h1>
-
+                
+                @if (Session::get('message'))
+                    <p class=" mb-6 bg-green-100 text-green-700 p-3">{{ Session::get('message') }}</p>
+                @endif
                 <form action="{{ route('property-inquiry', $property->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
@@ -218,10 +215,10 @@
                         <label class="inputLabel" for="name">Name <span
                                 class="text-red-800 font-serif">*</span></label>
                         <input class="inputField" type="text" id="name" name="name" placeholder="Full Name"
-                            value="">
+                            value="{{ old('name') }}" required>
 
                         @error('name')
-                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm">Name is required.</p>    
+                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm">{{ $message }}</p>    
                         @enderror
 
                     </div>
@@ -230,19 +227,22 @@
                         <label class="inputLabel" for="phone">Phone <span
                                 class="text-red-800 font-serif">*</span></label>
                         <input class="inputField" type="text" id="phone" name="phone" placeholder="Phone"
-                            value="">
-                            
-                            {{-- <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> $message </p> --}}
-                            
+                            value="{{ old('phone') }}" required>
+                        
+                        @error('phone')
+                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> {{ $message }} </p>
+                        @enderror    
                     </div>
 
                     <div class="mt-5">
                         <label class="inputLabel" for="email">Email <span
                                 class="text-red-800 font-serif">*</span></label>
                         <input class="inputField" type="email" id="email" name="email" placeholder="E-mail"
-                            value="">
-                            
-                            {{-- <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> $message </p> --}}
+                            value="{{ old('email') }}" required>
+                        
+                        @error('email')
+                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> {{ $message }} </p>
+                        @enderror
                             
                     </div>
 
@@ -250,9 +250,11 @@
                         <label class="inputLabel" for="message">Message <span
                                 class="text-red-800 font-serif">*</span></label>
                         <textarea class="inputField" id="message" name="message" rows="4"
-                            placeholder="I'm interested in this property"></textarea>
-                           
-                            {{-- <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> message </p> --}}
+                            placeholder="I'm interested in this property" required>{{ old('message') }}</textarea>
+                        
+                            @error('message')   
+                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> {{ $message }} </p>
+                        @enderror
                             
                     </div>
                     <div class="mt-5">
