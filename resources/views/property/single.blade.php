@@ -78,7 +78,7 @@
 
 
 
-<div id="notice" class="text-center bg-green-100 text-green-700 p-3">session 'message'</div>
+{{-- <div id="notice" class="text-center bg-green-100 text-green-700 p-3">session 'message'</div> --}}
 
 
 
@@ -211,27 +211,28 @@
             <div class="px-4 py-5 text-left bg-gray-300 my-5">
                 <h1 class="text-2xl font-normal leading-none mb-5 langBN">Enquire about this property</h1>
 
-                <form action="" method="POST" enctype="multipart/form-data">
-                    
+                <form action="{{ route('property-inquiry', $property->id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
 
                     <div class="">
                         <label class="inputLabel" for="name">Name <span
                                 class="text-red-800 font-serif">*</span></label>
-                        <input class="inputField" type="text" id="name" name="name" placeholder="First Name"
-                            value="name">
+                        <input class="inputField" type="text" id="name" name="name" placeholder="Full Name"
+                            value="">
 
-                        
-                        <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> $message </p>
-                        
+                        @error('name')
+                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm">Name is required.</p>    
+                        @enderror
+
                     </div>
 
                     <div class="mt-5">
                         <label class="inputLabel" for="phone">Phone <span
                                 class="text-red-800 font-serif">*</span></label>
                         <input class="inputField" type="text" id="phone" name="phone" placeholder="Phone"
-                            value=" phone">
+                            value="">
                             
-                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> $message </p>
+                            {{-- <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> $message </p> --}}
                             
                     </div>
 
@@ -239,9 +240,9 @@
                         <label class="inputLabel" for="email">Email <span
                                 class="text-red-800 font-serif">*</span></label>
                         <input class="inputField" type="email" id="email" name="email" placeholder="E-mail"
-                            value="email">
+                            value="">
                             
-                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> $message </p>
+                            {{-- <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> $message </p> --}}
                             
                     </div>
 
@@ -249,15 +250,15 @@
                         <label class="inputLabel" for="message">Message <span
                                 class="text-red-800 font-serif">*</span></label>
                         <textarea class="inputField" id="message" name="message" rows="4"
-                            placeholder="I'm interested in this property">message</textarea>
+                            placeholder="I'm interested in this property"></textarea>
                            
-                            <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> message </p>
+                            {{-- <p class="bg-red-100 text-red-500 px-2 mt-2 text-sm"> message </p> --}}
                             
                     </div>
                     <div class="mt-5">
                         <button type="submit"
                             class="w-full border-2 uppercase text-center py-3 font-semibold border-red-800 hover:bg-transparent hover:text-red-800 duration-200  text-white bg-red-800 rounded-none"><i
-                                class="fa fa-commenting mr-2"></i>Details</button>
+                                class="fa fa-commenting mr-2"></i>Request Details</button>
                     </div>
 
                 </form>
