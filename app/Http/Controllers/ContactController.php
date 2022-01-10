@@ -26,8 +26,16 @@ class ContactController extends Controller
         $contact->save();
 
         // send user & admin message
-        Mail::send(new ContactMail()); 
+        Mail::send(new ContactMail($contact)); 
 
         return redirect(route('single-property', $property_id))->with(['message' => 'Your message has been sent.']);
     }
+
+    //for debuging mail test 
+
+    // public function test(){
+    //     Mail::send(new ContactMail()); 
+    //     dd('Test');
+    // }
+
 }
