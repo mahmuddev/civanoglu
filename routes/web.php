@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PropertyController;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +18,16 @@ use App\Http\Controllers\PropertyController;
 |
 */
 
-Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
+    Route::get('/', [HomeController::class, 'home'])->name('home');
+    Route::get('/property/{id}', [PropertyController::class, 'single'])->name('single-property');
+    Route::get('/properties/', [PropertyController::class, 'index'])->name('properties');
+    Route::get('/page/{slug}', [PageController::class, 'single'])->name('page');
+    Route::post('/property-inquiry/{id}', [ContactController::class, 'propertyInquiry'])->name('property-inquiry');
+});
 
 // For Debuging mail test
 // Route::get('/email-test', [ContactController::class, 'test']); 
-
-Route::get('/property/{id}', [PropertyController::class, 'single'])->name('single-property');
-Route::get('/properties/', [PropertyController::class, 'index'])->name('properties');
-Route::get('/page/{slug}', [PageController::class, 'single'])->name('page');
-Route::post('/property-inquiry/{id}', [ContactController::class, 'propertyInquiry'])->name('property-inquiry');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
