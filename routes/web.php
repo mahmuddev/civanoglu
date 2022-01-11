@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
@@ -29,8 +30,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
 // For Debuging mail test
 // Route::get('/email-test', [ContactController::class, 'test']); 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+//Admin Routes
+Route::middleware(['auth'])->group(function(){
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard-index');
+    Route::get('/dashboard/properties', [DashboardController::class, 'properties'])->name('dashboard-properties');
+    Route::get('/dashboard/add-property', [DashboardController::class, 'addProperty'])->name('add-property');
+});
 
 require __DIR__ . '/auth.php';

@@ -4,15 +4,18 @@
     </div>
     <div class="w-full">
         <ul class="flex justify-center">
-            <li><a class="inline-block p-4 text-white" href="{{ route('properties') }}?type='0'">Land</a></li>
-            <li><a class="inline-block p-4 text-white" href="{{ route('properties') }}?type=2">{{ __('header.menu_villa') }}</a></li>
-            <li><a class="inline-block p-4 text-white" href="{{ route('properties') }}?type=1">Apartment</a></li>
-            <li><a class="inline-block p-4 text-white" href="{{ route('page', 'about-us') }}">About Us</a></li>
-            <li><a class="inline-block p-4 text-white" href="{{ route('page', 'contact-us') }}">Contact Us</a></li>
+            <li><a class="inline-block p-4 text-white" href="{{ route('properties') }}?type='0'">{{ __('Land') }}</a></li>
+            {{-- Php file creat example --}}
+            {{-- <li><a class="inline-block p-4 text-white" href="{{ route('properties') }}?type=2">{{ __('header.menu_villa') }}</a></li> --}}
+            {{-- json example --}}
+            <li><a class="inline-block p-4 text-white" href="{{ route('properties') }}?type=2">{{ __('Villa') }}</a></li>
+            <li><a class="inline-block p-4 text-white" href="{{ route('properties') }}?type=1">{{ __('Apartment') }}</a></li>
+            <li><a class="inline-block p-4 text-white" href="{{ route('page', 'about-us') }}">{{ __('About') }}</a></li>
+            <li><a class="inline-block p-4 text-white" href="{{ route('page', 'contact-us') }}">{{ __('Contact') }}</a></li>
         </ul>
     </div>
     <div class="min-w-max">
-        <a href=""><img width="30" src="/img/flag-usa.png" alt=""></a>
-        <a href=""><img width="30" src="/img/flag-turkey.png" alt=""></a>
+        <a href="{{ LaravelLocalization::getLocalizedURL('en') }}"><img width="30" src="/img/flag-usa.png" alt=""></a>
+        <a href="{{ LaravelLocalization::getLocalizedURL('bn') }}"><img width="30" src="/img/flag-bd.png" alt=""></a>
     </div>
 </div>

@@ -4,8 +4,7 @@
     <div class="relative pt-52 pb-64 z-10 bg-cover bg-center" style="background-image: url('/img/hero-bg.jpg')">
         <div class="absolute h-full w-full bg-black opacity-50 left-0 top-0"></div>
         <div class="container relative z-20 text-white text-center">
-            <h2 class="text-6xl font-bold">Guide Property -- your guide <br>to the primary real estate market in dubai.
-            </h2>
+            <h2 class="text-6xl font-bold">{{ __('Guide Property') }}</h2>
             <p class="text-2xl mt-8">The most convenient real estate search portal in Dubai, start searching now!</p>
         </div>
     </div>
