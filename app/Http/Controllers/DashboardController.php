@@ -16,7 +16,8 @@ class DashboardController extends Controller
         $properties = Property::latest()->paginate(20);
         return view('admin.properties', ['properties' => $properties]);
     }
-    public function addProperty(){
-        
+    public function addProperty()
+    {
+        return view('admin.Property.add-property');
     }
 }
