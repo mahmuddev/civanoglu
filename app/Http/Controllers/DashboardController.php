@@ -20,4 +20,22 @@ class DashboardController extends Controller
     {
         return view('admin.Property.add-property');
     }
+    public function createProperty(Request $request){
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'name_bn' => 'required',
+            'featured_image' => 'required|image',
+            'location_id' => 'required',
+            'price' => 'required|integer',
+            'sale' => 'integer',
+            'type' => 'integer',
+            'bathrooms' => 'integer',
+            'net_sqm' => 'integer',
+            'pool' => 'integer',
+            'overview' => 'required',
+            'overview_bn' => 'required',
+            'description' => 'required',
+            'description_bn' => 'required',
+        ]);
+    }
 }

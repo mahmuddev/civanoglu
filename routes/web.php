@@ -35,6 +35,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard-index');
     Route::get('/dashboard/properties', [DashboardController::class, 'properties'])->name('dashboard-properties');
     Route::get('/dashboard/add-property', [DashboardController::class, 'addProperty'])->name('add-property');
+    Route::post('/dashboard/create-property', [DashboardController::class, 'createProperty'])->name('create-property');
 });
 
 require __DIR__ . '/auth.php';

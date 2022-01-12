@@ -147,5 +147,5 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .civanoglu-input{
-    @apply border border-gray-400 w-full px-4 py-2
+    @apply border border-gray-400 w-full px-4 py-2 rounded-md
 }
