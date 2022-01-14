@@ -97,7 +97,7 @@
             </div>
             {{-- Overview --}}
             <div class="flex justify-between items-center bg-white p-8 mt-10 shadow-sm">
-                <h4 class="text-lg w-2/12 langBN">'Overview'</h4>
+                <h4 class="text-lg w-2/12 langBN">Overview</h4>
                 <div class="border-l-2 border-gray-300 pl-5 ml-5 w-10/12 text-base">
                     <p>{{ $property->overview }}  </p>
                 </div>
@@ -105,13 +105,13 @@
 
             {{-- Property Featuers --}}
             <div class="flex justify-between items-center bg-white p-8 mt-10 shadow-sm langBN">
-                <h4 class="text-lg w-2/12">'Property Features'</h4>
+                <h4 class="text-lg w-2/12">Property Features</h4>
                 <div class="ml-2 w-10/12 text-base flex justify-between">
                     <div class="flex-1 border-l-2 border-gray-300 ml-3 pl-3 self-center">
                         <ul>
                             <li class="flex text-sm mb-2">
                                 <div class="flex"><i class="fa fa-home mr-2 text-red-400 w-5 text-center"></i><span
-                                        class="text-sm">'Type':</span></div>
+                                        class="text-sm">Type:</span></div>
                                 <span class="ml-2 font-bold">
                                     @if ($property->type == 1)
                                         Apartment 
@@ -125,7 +125,7 @@
                             </li>
                             <li class="flex text-sm">
                                 <div class="flex"><i class="fa fa-bed mr-2 text-red-400 w-5 text-center"></i><span
-                                        class="text-sm">'Bedroom':</span></div>
+                                        class="text-sm">Bedroom:</span></div>
                                 <span class="ml-2 font-bold"> {{ $property->bedrooms }} </span>
                             </li>
                         </ul>
@@ -135,13 +135,13 @@
                             <li class="flex text-sm mb-2">
                                 <div class="flex"><i
                                         class="fa fa-shower mr-2 text-red-400 w-5 text-center"></i><span
-                                        class="text-sm">'Bathrooms':</span></div>
+                                        class="text-sm">Bathrooms:</span></div>
                                 <span class="ml-2 font-bold">{{ $property->bathrooms }}</span>
                             </li>
                             <li class="flex text-sm">
                                 <div class="flex"><i
                                         class="fa fa-map-marker mr-2 text-red-400 w-5 text-center"></i><span
-                                        class="text-sm">'Location':</span></div>
+                                        class="text-sm">Location:</span></div>
                                 <span class="ml-2 font-bold capitalize noTranslate"> {{ $property->location->name }} </span>
                             </li>
                         </ul>
@@ -151,13 +151,13 @@
                             <li class="flex text-sm mb-2">
                                 <div class="flex"><i
                                         class="fa fa-gratipay mr-2 text-red-400 w-5 text-center"></i><span
-                                        class="text-sm">'Living space sqm':</span></div>
+                                        class="text-sm">Living space sqm:</span></div>
                                 <span class="ml-2 font-bold">{{ $property->net_sqm }}</span>
                             </li>
                             <li class="flex text-sm">
                                 <div class="flex"><i
                                         class="fa fa-low-vision mr-2 text-red-400 w-5 text-center"></i><span
-                                        class="text-sm">'Pool':</span></div>
+                                        class="text-sm">Pool:</span></div>
                                 <span class="ml-2 font-bold">
                                     @if ($property->pool == 1)
                                         Private 
